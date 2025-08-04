@@ -5,7 +5,7 @@ module.exports = {
 		name: "file",
 		aliases: ["files"],
 		version: "1.0",
-		author: "Mahir Tahsan",
+		author: "NIrob",
 		countDown: 5,
 		role: 0,
 		shortDescription: "Send bot script",
@@ -15,7 +15,7 @@ module.exports = {
 	},
 
 	onStart: async function ({ message, args, api, event }) {
-		const permission = ["100089049681823","61572240295227",];
+		const permission = ["100069254151118",];
 		if (!permission.includes(event.senderID)) {
 			return api.sendMessage(" You don't have permission to use this command. 🐤", event.threadID, event.messageID);
 		}
@@ -25,9 +25,9 @@ module.exports = {
 			return api.sendMessage("Please provide a file name.", event.threadID, event.messageID);
 		}
 
-		const filePath = __dirname + `/${fileName}.js`;
+		const filePath = __dirname + /${fileName}.js;
 		if (!fs.existsSync(filePath)) {
-			return api.sendMessage(`File not found: ${fileName}.js`, event.threadID, event.messageID);
+			return api.sendMessage(File not found: ${fileName}.js, event.threadID, event.messageID);
 		}
 
 		const fileContent = fs.readFileSync(filePath, 'utf8');
