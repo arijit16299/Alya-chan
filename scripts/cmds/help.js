@@ -2,12 +2,12 @@ const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
 
 const catboxImages = [
-  "https://files.catbox.moe/yh9j1t.mp4",
-  "https://files.catbox.moe/c6ujy4.jpg",
-  "https://files.catbox.moe/ueiep7.jpg",
-  "https://files.catbox.moe/5wytj0.jpg",
-  "https://files.catbox.moe/ueiep7.jpg", // Replace or add valid image URLs
-  "https://files.catbox.moe/6mckih.mp4"
+  "https://files.catbox.moe/ku0mel.mp4",
+  "https://files.catbox.moe/x9ujup.jpg",
+  "https://files.catbox.moe/rzuv8y.jpg",
+  "https://files.catbox.moe/qx58q3.jpg",
+  "https://files.catbox.moe/7k06z9.jpg", // Replace or add valid image URLs
+  "https://files.catbox.moe/3xcmju.mp4"
 ];
 
 // Split array into n parts evenly
@@ -30,7 +30,7 @@ module.exports = {
     countDown: 5,
     role: 0,
     shortDescription: {
-      en: "N I R O B - BOT help menu, split into 6 pages!",
+      en: "ＡＲＩＪＩＴ - BOT help menu, split into 6 pages!",
     },
     longDescription: {
       en: "Shows commands with pastel style and catbox images on 6 pages.",
@@ -80,7 +80,7 @@ module.exports = {
 
     msg += `╰───────────────────────────────╯  \n`;
     msg += `Use "${prefix}help ${page === 6 ? 1 : page + 1}" to see more commands!\n`;
-    msg += `𝙳𝚎𝚟: 𝙽𝚒𝚛𝚘𝚋 ꨄ︎\n`;
+    msg += `𝙳𝚎𝚟: Arijit ꨄ︎\n`;
 
     const imgUrl = catboxImages[page - 1];
     await message.reply({
