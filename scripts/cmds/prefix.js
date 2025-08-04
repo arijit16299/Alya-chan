@@ -1,10 +1,12 @@
+const axios = require("axios");
 const fs = require("fs");
+const utils = global.utils;
 
 module.exports = {
     config: {
         name: "prefix",
-        version: "1.6",
-        author: "Nirob",
+        version: "1.8",
+        author: "Arijit",
         countDown: 5,
         role: 0,
         description: "Change the bot's command prefix in your chat or globally (admin only)",
@@ -19,7 +21,7 @@ module.exports = {
             confirmThisThread: "Please react to this message to confirm changing the prefix in your chat",
             successGlobal: "Changed system bot prefix to: %1",
             successThisThread: "Changed prefix in your chat to: %1",
-            myPrefix: "\n\n‣ 𝐆𝐥𝐨𝐛𝐚𝐥 𝐩𝐫𝐞𝐟𝐢𝐱: %1 \n\n‣ 𝐘𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐩𝐫𝐞𝐟𝐢𝐱: %2\n\n‣ ᴍᴀᴅᴇ ʙʏ ɴɪʀᴏʙ\n"
+            myPrefix: "\n\n‣ 𝐆𝐥𝐨𝐛𝐚𝐥 𝐩𝐫𝐞𝐟𝐢𝐱: %1 \n\n‣ 𝐘𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐩𝐫𝐞𝐟𝐢𝐱: %2\n\n‣ 𝐀𝐝𝐦𝐢𝐧 \n\n‣ A R I J I T 🖤\n\n‣ 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 ⓕ\nhttps://www.facebook.com/arijit016\n\n"
         }
     },
 
@@ -43,7 +45,7 @@ module.exports = {
 
         if (args[1] === "-g") {
             if (role < 2) return message.reply(getLang("onlyAdmin"));
-            formSet.setGlobal = true;
+            else formSet.setGlobal = true;
         } else {
             formSet.setGlobal = false;
         }
@@ -60,7 +62,18 @@ module.exports = {
 
     onChat: async function ({ event, message, getLang }) {
         if (event.body && event.body.toLowerCase() === "prefix") {
-            return message.reply(getLang("myPrefix", global.GoatBot.config.prefix, global.utils.getPrefix(event.threadID)));
+            try {
+                const videoUrl = "https://files.catbox.moe/zubdm0.mp4";
+
+                return message.reply({
+                    body: getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)),
+                    attachment: await global.utils.getStreamFromURL(videoUrl)
+                });
+
+            } catch (error) {
+                console.error("Error fetching video:", error);
+                return message.reply("An error occurred while fetching the video.");
+            }
         }
     },
 
