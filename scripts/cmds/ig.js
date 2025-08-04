@@ -12,7 +12,7 @@ module.exports = {
     shortDescription: "বাংলা নোট + ছবি",
     longDescription: "Random Bengali styled quote with aesthetic image",
     category: "fun",
-    guide: "{prefix}ig or /",
+    guide: "{prefix}ig or !",
     usePrefix: false
   },
 
