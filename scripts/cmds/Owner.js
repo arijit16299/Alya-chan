@@ -33,32 +33,51 @@ module.exports = {
       hour12: true
     });
 
+    // 📦 Short Version Message (default)
+    const infoMessage = `👤 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢
+━━━━━━━━━━━━━━━
+• 𝗡𝗔𝗠𝗘: A R I J I T
+• 𝗡𝗜𝗖𝗞𝗡𝗔𝗠𝗘 : Aru
+• 𝗔𝗗𝗗𝗥𝗘𝗦𝗦: KOLKATA🇮🇳
+• 𝗚𝗘𝗡𝗗𝗘𝗥: MALE  
+• 𝗔𝗚𝗘: 20  
+• 𝗥𝗘𝗟𝗔𝗧𝗜𝗢𝗡𝗦𝗛𝗜𝗣: SINGLE  
+• 𝗪𝗢𝗥𝗞: NTG  
+• 𝗙𝗕 🆔: Nefarious Arijit II   
+• 𝐈𝐍𝐒𝐓𝐀 🆔: itz_arijit_777
+• 📧: arijitnaha2@gmail.com
+
+🤖 𝗕𝗢𝗧: ALYA BOT
+🏠 GC: ${threadName}
+🕒 ${dateStr} | ${timeStr}
+━━━━━━━━━━━━━━━`;
+
+    /*
+    // 🧾 Long Version (optional — uncomment if needed)
     const infoMessage = `╔╝❮${userName}❯╚╗
 ━━━━━━━━━━━━━━━━━━━━━━
-𝐍𝐀𝐌𝐄: NIROB HOSSAIN
-𝐑𝐄𝐋𝐈𝐆𝐈𝐎𝐍: ISLAM
-𝐀𝐃𝐃𝐑𝐄𝐒𝐒: Munshiganj
-𝐆𝐄𝐍𝐃𝐄𝐑: MALE
-𝐀𝐆𝐄: 18
-𝐑𝐄𝐋𝐀𝐓𝐈𝐎𝐍𝐒𝐇𝐈𝐏: 𝐅𝐀𝐈𝐋𝐄𝐃
-𝐖𝐎𝐑𝐊: NTG
-𝐆𝐌𝐀𝐈𝐋: nahadnirob@gmail.com
-𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊: https://www.facebook.com/nirob.nahad007
-𝐌𝐀𝐒𝐒𝐄𝐍𝐆𝐄𝐑: N/A
-𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏: wa.me/+8801772594397
-𝐈𝐌𝐎: PERSONAL 🫣
-𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌: N/A
+👤 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢
 ━━━━━━━━━━━━━━━━━━━━━━
-
-Bot Prefix: ( . )
-Bot Name: CAT BOT
-GC Name: ${threadName}
-Time:【 ${dateStr} || ${timeStr} 】
+• 𝗡𝗔𝗠𝗘: A R I J I T
+• 𝗡𝗜𝗖𝗞𝗡𝗔𝗠𝗘 : Aru
+• 𝗔𝗗𝗗𝗥𝗘𝗦𝗦: KOLKATA🇮🇳
+• 𝗚𝗘𝗡𝗗𝗘𝗥: MALE  
+• 𝗔𝗚𝗘: 20  
+• 𝗥𝗘𝗟𝗔𝗧𝗜𝗢𝗡𝗦𝗛𝗜𝗣: SINGLE  
+• 𝗪𝗢𝗥𝗞: NTG  
+• 𝗙𝗕 🆔: Nefarious Arijit II   
+• 𝐈𝐍𝐒𝐓𝐀 🆔: itz_arijit_777
+• 📧: arijitnaha2@gmail.com
+━━━━━━━━━━━━━━━━━━━━━━
+🤖 𝗕𝗢𝗧: ALYA BOT  
+🏠 𝗚𝗥𝗢𝗨𝗣: ${threadName}  
+🕒 𝗧𝗜𝗠𝗘: ${dateStr} | ${timeStr}  
 ━━━━━━━━━━━━━━━━━━━━━━`;
+    */
 
     await message.reply({
       body: infoMessage,
-      attachment: await global.utils.getStreamFromURL("https://files.catbox.moe/a86iqb.mp4")
+      attachment: await global.utils.getStreamFromURL("https://files.catbox.moe/klc7er.mp4")
     });
   }
 };
