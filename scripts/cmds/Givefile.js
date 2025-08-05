@@ -5,7 +5,7 @@ module.exports = {
 		name: "file",
 		aliases: ["files"],
 		version: "1.0",
-		author: "NIrob",
+		author: "NIROB",
 		countDown: 5,
 		role: 0,
 		shortDescription: "Send bot script",
@@ -25,9 +25,9 @@ module.exports = {
 			return api.sendMessage("Please provide a file name.", event.threadID, event.messageID);
 		}
 
-		const filePath = __dirname + /${fileName}.js;
+		const filePath = __dirname + `/${fileName}.js`;
 		if (!fs.existsSync(filePath)) {
-			return api.sendMessage(File not found: ${fileName}.js, event.threadID, event.messageID);
+			return api.sendMessage(`File not found: ${fileName}.js`, event.threadID, event.messageID);
 		}
 
 		const fileContent = fs.readFileSync(filePath, 'utf8');
