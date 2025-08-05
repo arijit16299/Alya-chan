@@ -22,7 +22,7 @@ module.exports = {
 
   onChat: async function ({ api, event }) {
     const body = event.body?.toLowerCase().trim();
-    if (body === "/" || body === "ig") {
+    if (body === "!" || body === "ig") {
       return sendQuoteWithImage(api, event);
     }
   }
