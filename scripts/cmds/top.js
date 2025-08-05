@@ -35,11 +35,11 @@ module.exports = {
     const topUsersList = topUsers.map((user, index) => {
       const moneyFormatted = formatNumber(user.money || 0); // যদি টাকা না থাকে তাহলে "0" দেখাবে
       const medals = ["🥇", "🥈", "🥉"];
-      return `${medals[index] || ${index + 1}.} ${user.name} - ${moneyFormatted}`;
+      return `${medals[index] || `${index + 1}.`} ${user.name} - ${moneyFormatted}`;
     });
 
     // Shortened header and compact design
-    const messageText = 👑 𝗧𝗢𝗣 𝗥𝗜𝗖𝗛𝗘𝗦𝗧 𝗨𝗦𝗘𝗥𝗦 👑\n━━━━━━━━━━━\n${topUsersList.join("\n")};
+    const messageText = `👑 𝗧𝗢𝗣 𝗥𝗜𝗖𝗛𝗘𝗦𝗧 𝗨𝗦𝗘𝗥𝗦 👑\n━━━━━━━━━━━\n${topUsersList.join("\n")}`;
 
     message.reply(messageText);
   }
